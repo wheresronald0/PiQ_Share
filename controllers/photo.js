@@ -1,6 +1,6 @@
 module.exports = {
   index: function(req, res) {
-    res.send("We're Routing Users!");
+    res.send("We're Routing Again!");
   },
   new: function(req, res) {
     // rending the form to create a new to do
