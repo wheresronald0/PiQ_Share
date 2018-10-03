@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const request = require("request");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
+const indexRouter = require("./routes/index.js");
 const photoRouter = require("./routes/photo.js");
 const userRouter = require("./routes/user.js");
 
@@ -10,8 +11,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
+app.use("/", indexRouter);
 app.use("/", photoRouter);
 app.use("/", userRouter);
+
 app.set("view engine", "ejs");
 
 mongoose.connect(

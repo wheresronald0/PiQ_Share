@@ -1,6 +1,6 @@
 module.exports = {
   index: function(req, res) {
-    res.send("photo route");
+    res.send("this is the index page!");
   },
   new: function(req, res) {
     // rending the form to create a new to do

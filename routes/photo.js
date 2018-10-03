@@ -8,7 +8,7 @@ const photoController = require("../controllers/photo.js");
 //   }
 // };
 
-router.get("/", photoController.index);
+router.get("/photo", photoController.index);
 // router.get("/new", photoController.new);
 // router.post("/", photoController.create);
 // router.get("/:id", photoController.show);
