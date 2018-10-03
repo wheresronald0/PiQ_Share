@@ -1,0 +1,28 @@
+{
+  "name": "piq_share",
+  "version": "1.0.0",
+  "description": "PiQ Share is a gallery for users to share pictures",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wheresronald0/PiQ_Share.git"
+  },
+  "author": "Ron Mason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wheresronald0/PiQ_Share/issues"
+  },
+  "homepage": "https://github.com/wheresronald0/PiQ_Share#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.3.1",
+    "node": "^10.11.0",
+    "request": "^2.88.0"
+  }
+}
