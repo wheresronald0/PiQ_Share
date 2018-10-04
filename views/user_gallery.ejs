@@ -14,17 +14,24 @@
     </header>
 
     <section>
+        <% piqs.forEach(function(piq) { %>
         <div id="piq_container">
             <div>
-                <img id="piq_img" src="https://images.unsplash.com/photo-1538467801609-6dd5c0a2b3e2?ixlib=rb-0.3.5&s=c177a3dd360f85863a3788ee2ff95e52&auto=format&fit=crop&w=925&q=80">
+                <img id="piq_img" src="<%= piq.location %> ">
             </div>
 
             <div>
-                <h6>Creator:</h6>
-                <a>View PiQ</a>
+                <h6>Creator:
+                    <%= piq.creator %>
+                </h6>
+                <a href="/usergallery/<%= piq._id %> ">View PiQ</a>
             </div>
         </div>
+        <% }); %>
+
     </section>
+
+
 
     <footer class="navbar navbar-expand-lg navbar-light bg-light">
     </footer>

@@ -26,10 +26,6 @@ mongoose.connect(
   { useNewUrlParser: true }
 );
 
-// app.get("/", (req, res) => {
-//   res.send("This is the first get route for PiQ!");
-// });
-
 app.listen(4000, () => {
   console.log("PiQ server is rockin!!");
 });

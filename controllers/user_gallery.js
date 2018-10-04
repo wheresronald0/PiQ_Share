@@ -1,12 +1,37 @@
+const mongoose = require("mongoose");
+const Piq = require("../models/new_piq.js");
+
 module.exports = {
   index: function(req, res) {
-    res.render("user_gallery");
+    Piq.find({}, (err, allPiqs) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("user_gallery", { piqs: allPiqs });
+      }
+    });
   },
   new: function(req, res) {
     // rending the form to create a new to do
   },
   create: function(req, res) {
-    // creating a new to do and saving it to the database
+    let creator = req.body.creator;
+    let date = req.body.date;
+    let location = req.body.location;
+    let story = req.body.story;
+    let newPiq = {
+      creator: creator,
+      date: date,
+      location: location,
+      story: story
+    };
+    Piq.create(newPiq, function(err, newPiqCreated) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.redirect("/usergallery");
+      }
+    });
   },
   show: function(req, res) {
     // displaying the data for a single to do

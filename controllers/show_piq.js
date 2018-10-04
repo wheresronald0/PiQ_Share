@@ -1,6 +1,6 @@
 module.exports = {
   index: function(req, res) {
-    res.send("photo route");
+    res.render("show_piq");
   },
   new: function(req, res) {
     // rending the form to create a new to do
