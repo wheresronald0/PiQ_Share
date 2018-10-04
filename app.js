@@ -4,16 +4,20 @@ const request = require("request");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const indexRouter = require("./routes/index.js");
-const photoRouter = require("./routes/photo.js");
+const showPiqRouter = require("./routes/show_piq.js");
 const userRouter = require("./routes/user.js");
+const userGalleryRouter = require("./routes/user_gallery.js");
+const newPiqRouter = require("./routes/new_piq.js");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use("/", indexRouter);
-app.use("/", photoRouter);
+app.use("/", showPiqRouter);
 app.use("/", userRouter);
+app.use("/", userGalleryRouter);
+app.use("/", newPiqRouter);
 
 app.set("view engine", "ejs");
 
