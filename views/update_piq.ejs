@@ -8,19 +8,19 @@
             <form action="/usergallery/<%= piq._id %>?_method=PUT" method="POST">
                 <div>
                     <label>Creator</label>
-                    <input type="text" name="creator" value="<%=piq.creator%>">
+                    <input type="text" name="piq[creator]" value="<%=piq.creator%>">
                 </div>
                 <div>
                     <label>PiQ'd on</label>
-                    <input type="text" name="date" value="<%=piq.date%>">
+                    <input type="text" name="piq[date]" value="<%=piq.date%>">
                 </div>
                 <div>
                     <label>PiQ URL</label>
-                    <input type="text" name="location" value="<%=piq.location%>">
+                    <input type="text" name="piq[location]" value="<%=piq.location%>">
                 </div>
                 <div>
                     <label>What's the Inspiration?</label>
-                    <textarea name="story"> <%=piq.story%> </textarea>
+                    <textarea name="piq[story]"> <%=piq.story%> </textarea>
                 </div>
                 <div>
                     <button>Update the PiQ!</button>

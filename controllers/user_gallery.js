@@ -52,17 +52,13 @@ module.exports = {
     });
   },
   update: function(req, res) {
-    // Piq.findByIdAndUpdate(
-    //   req.params.id,
-    //   req.body.newPiqData,
-    //   (err, updatePic) => {
-    //     if (err) {
-    //       console.log(err);
-    //     } else {
-    //       redirect("/usergallery/" + req.params.id);
-    //     }
-    //   }
-    // );
+    Piq.findByIdAndUpdate(req.params.id, req.body.piq, (err, updatePic) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.redirect("/usergallery/" + req.params.id);
+      }
+    });
   },
 
   destroy: function(req, res) {
