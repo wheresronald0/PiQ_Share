@@ -21,11 +21,12 @@
 }
 
 #piq_img {
-  height: 100px;
+  height: 200px;
   width: auto;
 }
 #piq_container {
   margin: 50px 50px;
+  display: inline-block;
 }
 
 footer {

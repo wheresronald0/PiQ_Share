@@ -12,7 +12,7 @@ module.exports = {
     });
   },
   new: function(req, res) {
-    // rending the form to create a new to do
+    res.render("new_piq");
   },
   create: function(req, res) {
     let creator = req.body.creator;
@@ -34,14 +34,37 @@ module.exports = {
     });
   },
   show: function(req, res) {
-    // displaying the data for a single to do
+    Piq.findById(req.params.id, (err, foundPiq) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("show_piq", { foundPiq: foundPiq });
+      }
+    });
   },
   edit: function(req, res) {
-    // rendering the form to update an existing to do
+    Piq.findById(req.params.id, (err, foundPiq) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("update_piq", { piq: foundPiq });
+      }
+    });
   },
   update: function(req, res) {
-    // updating a to do in the database
+    // Piq.findByIdAndUpdate(
+    //   req.params.id,
+    //   req.body.newPiqData,
+    //   (err, updatePic) => {
+    //     if (err) {
+    //       console.log(err);
+    //     } else {
+    //       redirect("/usergallery/" + req.params.id);
+    //     }
+    //   }
+    // );
   },
+
   destroy: function(req, res) {
     // deleting a to do
   }

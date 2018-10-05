@@ -2,29 +2,28 @@
 
 <div class="container">
     <% include partials/navbar %>
-
     <section>
         <div>
-            <div>Add a PiQ to your story</div>
-            <form action="/usergallery" method="POST">
+            <div>Update this moment in your story</div>
+            <form action="/usergallery/<%= piq._id %>?_method=PUT" method="POST">
                 <div>
                     <label>Creator</label>
-                    <input type="text" name="creator" placeholder="Enter the creator of this PiQ">
+                    <input type="text" name="creator" value="<%=piq.creator%>">
                 </div>
                 <div>
                     <label>PiQ'd on</label>
-                    <input type="text" name="date" placeholder="What date was this PiQ, PiQ'd on?">
+                    <input type="text" name="date" value="<%=piq.date%>">
                 </div>
                 <div>
                     <label>PiQ URL</label>
-                    <input type="text" name="location" placeholder="What's the URL of this PiQ?">
+                    <input type="text" name="location" value="<%=piq.location%>">
                 </div>
                 <div>
                     <label>What's the Inspiration?</label>
-                    <textarea name="story" placeholder="Document the story or just a few details"></textarea>
+                    <textarea name="story"> <%=piq.story%> </textarea>
                 </div>
                 <div>
-                    <button>Add the PiQ!</button>
+                    <button>Update the PiQ!</button>
                 </div>
 
             </form>
@@ -33,7 +32,7 @@
     </section>
 
     <section>
-        <a href="/usergallery">Back to Gallery</a>
+        <a href="/usergallery">Back to Gallery</>
     </section>
 
     <footer>
