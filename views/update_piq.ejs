@@ -1,38 +1,48 @@
-<% include partials/header.ejs %>
+<% include partials/header %>
 
+<% include partials/navbar %>
 <div class="container">
-    <% include partials/navbar %>
     <section>
-        <div>
-            <div>Update this moment in your story</div>
-            <form action="/usergallery/<%= piq._id %>?_method=PUT" method="POST">
-                <div>
+        <form class="form-horizontal" action="/usergallery/<%= piq._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label class="col-sm-offset-2">Update this moment in your story</h3>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>Creator</label>
                     <input type="text" name="piq[creator]" value="<%=piq.creator%>">
                 </div>
-                <div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>PiQ'd on</label>
                     <input type="text" name="piq[date]" value="<%=piq.date%>">
                 </div>
-                <div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>PiQ URL</label>
                     <input type="text" name="piq[location]" value="<%=piq.location%>">
                 </div>
-                <div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>What's the Inspiration?</label>
-                    <textarea name="piq[story]"> <%=piq.story%> </textarea>
+                    <textarea name="piq[story]" class="form-control" rows="3"> <%=piq.story%> </textarea>
                 </div>
-                <div>
-                    <button>Update the PiQ!</button>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-default">Update the PiQ!</button>
                 </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <a href="/usergallery">Back to Gallery</a>
+                </div>
+            </div>
+        </form>
 
-            </form>
-
-        </div>
-    </section>
-
-    <section>
-        <a href="/usergallery">Back to Gallery</>
     </section>
 
     <footer>
@@ -41,4 +51,4 @@
 </div>
 
 
-<% include partials/footer.ejs %>
+<% include partials/footer %>

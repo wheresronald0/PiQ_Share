@@ -1,39 +1,51 @@
 <% include partials/header.ejs %>
 
+<% include partials/navbar %>
 <div class="container">
-    <% include partials/navbar %>
-
     <section>
-        <div>
-            <div>Add a PiQ to your story</div>
-            <form action="/usergallery" method="POST">
-                <div>
+
+        <form action="/usergallery" method="POST" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-offset-2  control-label">Add a PiQ to your story</h3>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>Creator</label>
-                    <input type="text" name="creator" placeholder="Enter the creator of this PiQ">
+                    <input type="text" name="creator" placeholder="Enter the creator of this PiQ" class="form-control">
                 </div>
-                <div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>PiQ'd on</label>
-                    <input type="text" name="date" placeholder="What date was this PiQ, PiQ'd on?">
+                    <input type="text" name="date" placeholder="What date was this PiQ, PiQ'd on?" class="form-control">
                 </div>
-                <div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>PiQ URL</label>
-                    <input type="text" name="location" placeholder="What's the URL of this PiQ?">
+                    <input type="text" name="location" placeholder="What's the URL of this PiQ?" class="form-control">
                 </div>
-                <div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <label>What's the Inspiration?</label>
-                    <textarea name="story" placeholder="Document the story or just a few details"></textarea>
+                    <textarea name="story" placeholder="Document the story or just a few details" class="form-control"
+                        rows="3"></textarea>
                 </div>
-                <div>
-                    <button>Add the PiQ!</button>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Add the PiQ!</button>
                 </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <a type="button" href="/usergallery" class="btn btn-primary">Back to Gallery</a>
+                </div>
+            </div>
 
-            </form>
-
-        </div>
-    </section>
-
-    <section>
-        <a href="/usergallery">Back to Gallery</a>
+        </form>
     </section>
 
     <footer>

@@ -11,18 +11,19 @@
 #daily_gallery {
   margin-top: 100px;
   height: 600px;
-  background-color: aqua;
+  display: inline-block;
 }
 
 #dailyImg {
-  height: 400px;
-  border-radius: 50%;
+  height: 500px;
+  border-radius: 25%;
   margin-top: 40px;
 }
 
 #piq_img {
   height: 200px;
   width: auto;
+  border-radius: 10px;
 }
 #piq_container {
   margin: 50px 50px;
