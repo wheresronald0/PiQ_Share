@@ -2,51 +2,62 @@
 
 <% include partials/navbar %>
 <section class="container">
-    <form class="form-horizontal" action="/usergallery/<%= piq._id %>?_method=PUT" method="POST">
-        <div class="form-group">
-            <label class="col-sm-offset-2">Update this moment in your story</h3>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <label>Creator</label>
-                <input type="text" name="piq[creator]" value="<%=piq.creator%>" class="form-control">
+    <div>
+        <form class="form-horizontal" action="/usergallery/<%= piq._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label class="col-sm-offset-2">Update this moment in your story</h3>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <label>PiQ'd on</label>
-                <input type="text" name="piq[date]" value="<%=piq.date%>" class="form-control">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <label>Creator</label>
+                    <input type="text" name="piq[creator]" value="<%=piq.creator%>" class="form-control">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <label>PiQ URL</label>
-                <input type="text" name="piq[location]" value="<%=piq.location%>" class="form-control">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <label>PiQ'd on</label>
+                    <input type="text" name="piq[date]" value="<%=piq.date%>" class="form-control">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <label>What's the Inspiration?</label>
-                <textarea name="piq[story]" class="form-control" rows="3"> <%=piq.story%> </textarea>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <label>PiQ URL</label>
+                    <input type="text" name="piq[location]" value="<%=piq.location%>" class="form-control">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type=submit class="btn btn-default">Update the PiQ!</button>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <label>What's the Inspiration?</label>
+                    <textarea name="piq[story]" class="form-control" rows="3"> <%=piq.story%> </textarea>
+                </div>
             </div>
-        </div>
-    </form>
-
-    <form class="form-horizontal" action="/usergallery/<%=piq._id%>?_method=DELETE" method="POST">
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10 button-display-inline">
-                <button type="submit" class="btn btn-danger">Delete
-                    the PiQ!</button>
-                <button type="button" href="/usergallery" class="btn btn-primary">Back
-                    to Gallery</button>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type=submit class="btn btn-default">Update the PiQ!</button>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+    <div>
+        <form class="form-horizontal" action="/usergallery/<%=piq._id%>?_method=DELETE" method="POST">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-danger">Delete
+                        the PiQ!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form class="form-horizontal" action="/usergallery/<%=piq._id%>?_method=DELETE" method="POST">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button href="/usergallery" class="btn btn-primary">Back
+                        to Gallery</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <footer>
     </footer>
