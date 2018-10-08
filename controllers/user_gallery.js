@@ -62,6 +62,14 @@ module.exports = {
   },
 
   destroy: function(req, res) {
-    // deleting a to do
+    //tell db to delete it
+    Piq.findByIdAndRemove(req.params.id, (err, deletePic) => {
+      if (err) {
+        console.log(err);
+        res.redirect("/usergallery");
+      } else {
+        res.redirect("/usergallery");
+      }
+    });
   }
 };

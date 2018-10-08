@@ -20,14 +20,26 @@
   margin-top: 40px;
 }
 
-#piq_img {
-  height: 200px;
-  width: auto;
-  border-radius: 10px;
+.flex {
+  display: flex;
+  flex-wrap: wrap;
 }
-#piq_container {
-  margin: 50px 50px;
-  display: inline-block;
+
+.image {
+  border-radius: 20px;
+}
+
+.thumbnail {
+  border: none;
+}
+
+.navbar-brand {
+  color: blue;
+  font-size: 18px;
+}
+
+.form-group .button-display-inline {
+  display: inline;
 }
 
 footer {
