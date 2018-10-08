@@ -1,5 +1,4 @@
 mongoose = require("mongoose");
-//const data = mongoose();
 
 let piqSchema = mongoose.Schema({
   creator: String,

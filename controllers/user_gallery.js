@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const passport = require("passport");
+const User = require("../models/user.js");
 const Piq = require("../models/new_piq.js");
 
 module.exports = {

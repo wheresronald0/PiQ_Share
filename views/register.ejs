@@ -1,5 +1,32 @@
 <% include partials/header.ejs %>
-<h1>Resiter</h1>
+
+<section class="container">
+    <form class="form-horizontal" action="/register" method="POST">
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-6">
+                <h1>Register your PiQ Share Account </h1>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="username" placeholder="Username is your email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-6">
+                <button class="btn btn-default">Register</button>
+            </div>
+        </div>
+    </form>
+</section>
 
 
 <% include partials/footer.ejs %>
