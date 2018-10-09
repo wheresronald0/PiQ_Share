@@ -15,9 +15,10 @@ const Pic = require("./models/new_piq.js");
 const User = require("./models/user.js");
 
 mongoose.connect(
-  "mongodb://localhost/PiQ_Share",
+  "mongodb://piqshareadmin:dbadmin1@ds123603.mlab.com:23603/piqshare",
   { useNewUrlParser: true }
 );
+// mongoose.connect("mongodb://localhost/PiQ_Share",{ useNewUrlParser: true });
 
 let app = express();
 app.use(
