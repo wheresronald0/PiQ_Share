@@ -45,11 +45,7 @@ app.use("/", registerRouter);
 app.use("/", logoutRouter);
 app.use("/", userGalleryRouter);
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 4000;
-}
-app.listen(port);
+app.listen(process.env.PORT);
 
 // app.listen(4000, () => {
 //   console.log("PiQ server is rockin!!");
