@@ -1,3 +1,9 @@
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+
 const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
