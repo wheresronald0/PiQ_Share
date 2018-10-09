@@ -1,9 +1,3 @@
-app.set("port", process.env.PORT || 3001);
-
-app.listen(app.get("port"), () => {
-  console.log(`✅ PORT: ${app.get("port")} 🌟`);
-});
-
 const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
@@ -51,6 +45,12 @@ app.use("/", registerRouter);
 app.use("/", logoutRouter);
 app.use("/", userGalleryRouter);
 
-app.listen(4000, () => {
-  console.log("PiQ server is rockin!!");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 4000;
+}
+app.listen(port);
+
+// app.listen(4000, () => {
+//   console.log("PiQ server is rockin!!");
+// });
