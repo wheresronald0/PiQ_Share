@@ -14,17 +14,10 @@ const userGalleryRouter = require("./routes/user_gallery.js");
 const Pic = require("./models/new_piq.js");
 const User = require("./models/user.js");
 
-// mongoose.connect(
-//   "mongodb://piqshareadmin:dbadmin1@ds123603.mlab.com:23603/piqshare",
-//   { useNewUrlParser: true }
-// );
-// mongoose.connect(
-//   "mongodb://localhost/PiQ_Share",
-//   { useNewUrlParser: true }
-// );
-
 if (process.env.NODE_ENV == "production") {
-  mongoose.connect(process.env.MLAB_URL);
+  mongoose.connect(
+    "mongodb://piqshareadmin:dbadmin1@ds123603.mlab.com:23603/piqshare"
+  );
 } else {
   mongoose.connect("mongodb://localhost/PiQ_Share");
 }
@@ -61,7 +54,7 @@ app.use("/", userGalleryRouter);
 // }
 // app.listen(port);
 
-app.set("port", process.env.PORT || 3001);
+app.set("port", process.env.PORT || 4000);
 
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
