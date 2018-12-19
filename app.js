@@ -48,6 +48,7 @@ app.use("/", registerRouter);
 app.use("/", logoutRouter);
 app.use("/", userGalleryRouter);
 
+//herokus way
 // let port = process.env.PORT;
 // if (port == null || port == "") {
 //   port = 4000;
