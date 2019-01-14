@@ -10,7 +10,7 @@ PiQ Share is a photo cataloging and sharing application that lets users share or
 
 ## This project is / should be used for
 
-This web application is a full-stack MEN web application created to practice Node.js, Express, EJS, Mongoose and MongoDb, and Passport user authentication
+This web application is a full-stack MEN web application created to practice Node.js, Express, EJS, Mongoose and MongoDB, and Passport user authentication
 
 ## User Stories
 
@@ -25,7 +25,7 @@ This web application is a full-stack MEN web application created to practice Nod
 
 ### Global Page Structure
 
-- Logo (on and off navigation bar depending on page?)
+- Logo
 - Navigation bar
 - Galleries
 - Login/LogOut
@@ -97,7 +97,7 @@ This web application is a full-stack MEN web application created to practice Nod
 
 ## Contribution Guidelines
 
-if you'd like to contribute to this project, please checkout a branch
+If you'd like to contribute to this project, please checkout a branch
 
 ## Project's main repository
 

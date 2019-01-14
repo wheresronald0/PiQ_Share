@@ -1,49 +1,57 @@
 <% include partials/header %>
 
 <nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <h1 class="logo logoMain"><strong>PiQ</strong> Share</h1>
-            <h3 class="logo logoSub"> - capture your story</h3>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/usergallery/newpiq">New PiQ</a></li>
-                <li> <a href="/logout">Logout</a></li>
-            </ul>
-        </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span> <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1 class="logo logoMain"><strong>PiQ</strong> Share</h1>
+      <h3 class="logo logoSub">- capture your story</h3>
     </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/usergallery/newpiq">New PiQ</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <div class="container">
+  <section>
+    <div class="row flex">
+      <% piqs.forEach(function(piq) { %>
 
-    <section>
-        <div class="row flex">
-            <% piqs.forEach(function(piq) { %>
-
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <img class="image" src="<%= piq.location %> ">
-                    <h6>Creator:
-                        <%= piq.creator %>
-                    </h6>
-                    <a type="button" href="/usergallery/<%= piq._id %> " class="btn btn-default">View PiQ</a>
-                </div>
-            </div>
-            <% }); %>
+      <div class="col-md-4 col-sm-6">
+        <div class="thumbnail">
+          <img
+            class="img-responsive img-rounded"
+            alt="Responsive"
+            src="<%= piq.location %> "
+          />
+          <h6>Creator: <%= piq.creator %></h6>
+          <a
+            type="button"
+            href="/usergallery/<%= piq._id %> "
+            class="btn btn-default"
+            >View PiQ</a
+          >
         </div>
-    </section>
+      </div>
+      <% }); %>
+    </div>
+  </section>
 
-    <footer>
-    </footer>
-
+  <footer></footer>
 </div>
 
 <% include partials/footer %>

@@ -2,7 +2,7 @@ mongoose = require("mongoose");
 
 let piqSchema = mongoose.Schema({
   creator: String,
-  date: String,
+  date: Date,
   location: String,
   story: String
 });

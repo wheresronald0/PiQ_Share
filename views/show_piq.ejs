@@ -1,32 +1,27 @@
-<% include partials/header.ejs %>
-
-<%include partials/navbar %>
+<% include partials/header.ejs %> <%include partials/navbar %>
 <div class="container">
-    <section>
-        <div>
-            <img class="image" src=" <%= foundPiq.location %> ">
-        </div>
-        <div>
-            <h6>Creator:
-                <%= foundPiq.creator %>
-            </h6>
-            <h6>PiQ'd on:
-                <%= foundPiq.date %>
-            </h6>
-            <p>
-                <%= foundPiq.story %>
-            </p>
-        </div>
-        <div>
-            <a href="/usergallery/<%= foundPiq._id %>/edit" class="btn btn-default">Update PiQ</a>
-            <a href="/usergallery" class="btn btn-primary">Back to Gallery</a>
-        </div>
-    </section>
+  <section>
+    <div>
+      <img
+        class="img-responsive img-rounded"
+        alt="Responsive"
+        src=" <%= foundPiq.location %> "
+      />
+    </div>
+    <div>
+      <h6>Creator: <%= foundPiq.creator %></h6>
+      <h6>PiQ'd on: <%= foundPiq.date %></h6>
+      <p><%= foundPiq.story %></p>
+    </div>
+    <div>
+      <a href="/usergallery/<%= foundPiq._id %>/edit" class="btn btn-default"
+        >Update PiQ</a
+      >
+      <a href="/usergallery" class="btn btn-primary">Back to Gallery</a>
+    </div>
+  </section>
 
-    <footer>
-
-    </footer>
+  <footer></footer>
 </div>
-
 
 <% include partials/footer.ejs %>

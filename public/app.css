@@ -1,28 +1,33 @@
+.navbar {
+  height: 60px;
+  padding-top: 7px;
+  box-shadow: 0px 1px 5px grey;
+}
+
+.logo {
+  font-weight: 300;
+  display: inline;
+}
+
+.logoSub {
+  align-items: center;
+}
+
 #daily_img {
   text-align: center;
   margin-top: 20px;
   height: 600px;
 }
 
-#daily_gallery {
-  margin-top: 100px;
-  height: 600px;
-  display: inline-block;
-}
-
 #dailyImg {
-  height: 500px;
-  border-radius: 2%;
+  height: 80%;
+  border-radius: 10px;
   margin-top: 40px;
 }
 
 .flex {
   display: flex;
   flex-wrap: wrap;
-}
-
-.image {
-  border-radius: 20px;
 }
 
 .thumbnail {
@@ -38,15 +43,6 @@
   display: inline;
 }
 
-.logo {
-  font-weight: 300;
-  display: inline;
-}
-
-.logoSub {
-  align-items: center;
-}
-
 footer {
-  margin-top: 150px;
+  margin-top: 50px;
 }

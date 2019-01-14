@@ -1,45 +1,53 @@
 <% include partials/header.ejs %>
 
 <nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <h1 class="logo logoMain"><strong>PiQ</strong> Share</h1>
-            <h3 class="logo logoSub"> - capture your story</h3>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/usergallery">View Gallery</a></li>
-                <li> <a href="/login">Login</a></li>
-                <li> <a href="/register">Sign Up</a></li>
-            </ul>
-        </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span> <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1 class="logo logoMain"><strong>PiQ</strong> Share</h1>
+      <h3 class="logo logoSub">- capture your story</h3>
     </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/usergallery">View Gallery</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 <div class="container">
-    <section id="daily_img">
-        <div>
-            <h3>Here's Your Daily Inpiration!</h3>
+  <section id="daily_img">
+    <div>
+      <h3>Here's Your Daily Inspiration!</h3>
+      <h4>"Travel Wishing Well"</h4>
+    </div>
+
+    <div class="container">
+      <div class="row center-block">
+        <div class="col">
+          <img
+            class="img-responsive img-rounded"
+            alt="Responsive
+          image"
+            src="https://images.unsplash.com/photo-1538553642509-8822e25173d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dbe95626430c5975e53470fd1624f1bd&auto=format&fit=crop&w=1050&q=80"
+          />
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div>
-            <h4>"Travel Wishing Well"</h4>
-            <img id="dailyImg" src="https://images.unsplash.com/photo-1538553642509-8822e25173d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dbe95626430c5975e53470fd1624f1bd&auto=format&fit=crop&w=1050&q=80">
-        </div>
-    </section>
-
-    <section id="daily_gallery">
-    </section>
-
-    <footer class="navbar navbar-expand-lg navbar-light bg-light">
-    </footer>
-
+  <footer class="navbar navbar-expand-lg navbar-light bg-light"></footer>
 </div>
 
 <% include partials/footer.ejs %>
